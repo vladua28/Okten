@@ -15,18 +15,23 @@ h1 {
    width: 100%;
    display: flex;
    justify-content: space-around;
+   flex-wrap: wrap;
 }
 
 .block {
+   box-sizing: border-box;
    background-color: #EEFFFD;
    border: 2px solid #A8A4A4;
    border-radius: 10px;
-   width: 440px;
+   width: 100%;
+   max-width: 440px;
+   min-width: 375px;
    height: 530px;
    font-family: "Uchen", sans-serif;
    font-size: 20px;
    line-height: 37px;
    padding: 56px 28px 0px 21px;
+   margin-bottom: 2rem;
 }
 
 .button {

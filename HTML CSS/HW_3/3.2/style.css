@@ -1,0 +1,109 @@
+/*           Обнулення стилів                */
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,body {
+	height: 100%;
+}
+html {
+	font-size: 16px;
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	/* font-family:""; */
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+}
+/*                                            */
+
+body {
+   font-family: 'Jost', sans-serif;
+}
+
+
+/*                    HEADER                  */
+header {
+   width: 100vw;
+   height: 20vh;
+   background: rgba(217, 217, 217, 0.1);
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+nav {
+   color: #7A7070;
+   width: 50vw;
+   display: flex;
+   justify-content: space-around;
+}
+nav a {
+   font-size: 35px;
+}
+.active-link {
+   color: #3D6FB4;
+}
+
+/*                    MAIN                    */
+main {
+   width: 100vw;
+   height: 80vh;
+   padding-left: 138px;
+   display: flex;
+   flex-wrap: wrap;
+}
+.content{
+   width: 50vw;
+}
+image {
+   width: 50vw;
+}
+h1 {
+   width: 388px;
+   font-size: 70px;
+   line-height: 101px;
+   margin: 50px 0;
+}
+p {
+   width: 608px;
+   font-size: 35px;
+   line-height: 51px;
+   margin-bottom: 50px;
+}
+button {
+   width: 130px;
+   height: 55px;
+   border: 1px solid #000000;
+   border-radius: 30px;
+   font-size: 16px;
+   transition: 1s;
+}
+button:hover {
+   background: #ECBCBC;
+   transition: 1s;
+   transform: scale(1.1);
+}
+.content > button {
+   margin-right: 36px;
+}

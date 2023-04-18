@@ -1,0 +1,79 @@
+/*           Обнулення стилів                */
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,body {
+	height: 100%;
+}
+html {
+	font-size: 16px;
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	/* font-family:""; */
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+}
+/*                                            */
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Outfit', sans-serif;
+	text-align: center;
+}
+#top, #center, #bottom {
+   width: 100vw;
+   height: 100vh;
+   padding: 10vh 10vw;
+}
+#top {
+   background-color: orange;
+}
+#top a{
+   background-color: orange;
+}
+#center {
+   background-color: aquamarine;
+}
+#center a{
+   background-color: aquamarine;
+}
+#bottom {
+	background-color: lightgreen;
+	}
+h2 {
+   font-size: 3em;
+   margin: 2em 0;
+}
+p {
+	font-size: 24px;
+	margin-bottom: 50px;
+}
+a {
+	text-align: center;
+	font-size: 50px;
+}
