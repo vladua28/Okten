@@ -1,0 +1,162 @@
+/*           Обнулення стилів                */
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,body {
+	height: 100%;
+}
+html {
+	font-size: 16px;
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	font-family:"Roboto",sans-serif;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/*                                            */
+
+.heading {
+	background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png); 
+	background-size: 176px 186px; 
+	width: 174px; 
+	height: 50px; 
+	margin: 35px 0
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	width: 268px;
+	height: 36px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding-left: 8px;
+	margin-bottom: 5px;
+}
+
+.block {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	border: 1px solid lightgray;
+	border-radius: 1px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+}
+
+.main {
+	height: 400px;
+}
+
+.footer{
+	font-size: 14px;
+}
+
+button {
+	background-color: #1E88E5;
+	height: 32px;
+	width: 268px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding-left: 10px;
+	margin: 10px 0;
+	font-weight: 700;
+	color: white;
+	border-radius: 10px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #1877F2;
+}
+
+.alt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.grayline {
+	margin: 10px 0 25px 0;
+	color:gray
+}
+
+.grayline::before {
+	content: "";
+	display: inline-block;
+	width: 100px;
+	height: 1px;
+	background-color: lightgray;
+	margin-right: 15px;
+	margin-bottom: 6px;
+}
+
+.grayline::after {
+	content: "";
+	display: inline-block;
+	width: 100px;
+	height: 1px;
+	background-color: lightgray;
+	margin-left: 15px;
+	margin-bottom: 6px;
+}
+
+.fb {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.fb::before{
+	display: inline-block;
+	content: url(icons8-facebook-25.png);
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.forgotten{
+	font-size: 14px;
+}
+
+span {
+	color: #1E88E5;
+	font-weight: 700;
+}
+
+.footer {
+	height: 61px;
+	display: flex;
+	justify-content: center;
+}
