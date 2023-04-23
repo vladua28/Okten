@@ -52,7 +52,7 @@ body {
 
 body {
 	font-family: 'Glitch', sans-serif;
-	width: 100vw;
+	width: 96vw;
 	height: 100vh;
 	background-image: url(bg.gif);
 	background-repeat: no-repeat;
@@ -103,7 +103,15 @@ a {
 	color: black;
 }
 
-.hw li {
-	font-family: 'Technos', sans-serif;
-	font-size: 30px;
+body::-webkit-scrollbar {
+	width: 20px;
+ }
+ 
+ body::-webkit-scrollbar-track {
+	background:  linear-gradient(0deg, #D8277C 0%, #063CF2 100%);
+ }
+ 
+ body::-webkit-scrollbar-thumb {
+	background: transparent;
+	box-shadow: 0px 0px 0px 100000vh black;
 }
