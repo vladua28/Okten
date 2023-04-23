@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Technos';
-	src: url(/Other/Technos-PKDZP.otf);
+	src: url(Other/Technos-PKDZP.otf);
 }
 @font-face {
 	font-family: 'Glitch';
@@ -54,7 +54,7 @@ body {
 	font-family: 'Glitch', sans-serif;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(Other/bg.gif);
+	background-image: url(Other/bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
