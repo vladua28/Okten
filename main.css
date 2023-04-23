@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: 'Glitch';
-	src: url(Other/Sdglitchrobotdemo-GOPdO.ttf);
+	src: url(Sdglitchrobotdemo-GOPdO.ttf);
 }
 
 
@@ -55,7 +55,7 @@ body {
 	font-family: 'Glitch', sans-serif; ;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("Other/bg.gif");
+	background-image: url(bg.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
