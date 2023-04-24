@@ -1,10 +1,14 @@
-@font-face {
+/* @font-face {
 	font-family: 'Technos';
 	src: url(Technos-PKDZP.otf);
 }
 @font-face {
 	font-family: 'Glitch';
 	src: url(Sdglitchrobotdemo-GOPdO.ttf);
+} */
+@font-face {
+	font-family: 'Pixel';
+	src: url(victor-pixel.ttf);
 }
 
 
@@ -51,7 +55,8 @@ body {
 
 
 body {
-	font-family: 'Glitch', sans-serif;
+	/* font-family: 'Glitch', sans-serif; */
+	font-family: 'Pixel', sans-serif;
 	width: 96vw;
 	height: 100vh;
 	background-image: url(bg.gif);
@@ -64,7 +69,7 @@ body {
 h1 {
 	font-size: 70px;
 	text-align: center;
-	margin: 2vh 0;
+	margin: 1.5vh  0;
 }
 
 
@@ -80,7 +85,7 @@ li {
 	width: 300px;
 	height: 60px;
 	font-size: 40px;
-	line-height: 60px;
+	line-height: 50px;
 	background-color: #b957ce;
 	text-align: center;
 	margin-bottom: 15px;
@@ -102,10 +107,10 @@ a {
 	color: black;
 }
 
-.hw li {
+/* .hw li {
 	font-family: 'Technos', sans-serif;
 	font-size: 30px;
-}
+} */
 
  body::-webkit-scrollbar {
 	width: 20px;
