@@ -117,7 +117,7 @@ a {
  }
  
  body::-webkit-scrollbar-track {
-	background:  linear-gradient(0deg, #D8277C 0%, #063CF2 100%);
+	background:  linear-gradient(0deg, #164D5F 0%, #206A82 20%, #2D3264 30%, #1D2345 50%, #2D3264 70%, #48299F 100%);
  }
  
  body::-webkit-scrollbar-thumb {
