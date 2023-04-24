@@ -37,7 +37,7 @@ button,input,textarea,select,a {
 body {
 	line-height: 1;
 	/* color: #000; */
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 }
 .wrapper {
    min-height: 100%;
@@ -46,45 +46,6 @@ body {
 	align-items: center;
 }
 /*                                            */
-
-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-
-
-input {
-	color: gray;
-	font-weight: 700;
-	width: 400px;
-	height: 40px;
-	line-height: 40px;
-	border: 1px solid darkgray;
-	border-radius: 2px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	margin-bottom: 30px;
-	padding-left: 10px;
-}
-
-input::placeholder {
-	color: darkgray;
-}
-
-.name {
-	width: 400px;
-	display: flex;
-	justify-content: space-between;
-}
-
-.first {
-	width: 160px;
-}
-
-.last {
-	width: 230px;
-}
 
 .conteiner {
 	width: 500px;
@@ -96,29 +57,23 @@ input::placeholder {
 	margin: 0 auto
 }
 
-p {
-	color: darkgray;
-	font-size: 14px;
-	width: 400px;
-	margin-bottom: 12px;
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-span {
-	color: #000;
+.name {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
-button {
-	font-family: inherit;
-	font-size: 18px;
-	font-weight: 700;
-	width: 400px;
-	height: 40px;
-	border: 2px solid #EDC200;
-	border-radius: 3px;
-	background-color: #F8DA00;
-	cursor: pointer;
+.name {
 }
-
-button:hover {
-	background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
+.gender {
+}
+.operator {
+}
+.buttons {
 }
