@@ -127,3 +127,11 @@ img {
 	left: 20px;
 	width: 10vw;
 }
+
+img:hover {
+	transform: scale(1.1);
+}
+
+img:active {
+	transform: scale(0.9);
+}
