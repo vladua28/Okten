@@ -1,0 +1,115 @@
+/*           Обнулення стилів                */
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,body {
+	height: 100%;
+}
+html {
+	font-size: 16px;
+}
+button,input,textarea,select,a {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+	background-color: inherit;
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+/*                                            */
+
+body { 
+	background: linear-gradient(to right, #a9e4f7 0%,#0fb4e7 100%);
+}
+
+.conteiner {
+	background-color: #fff;
+	width: 400px;
+	height: auto;
+	border: 1px solid darkgray;
+	border-radius: 5px;	
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	margin: 0 auto
+}
+
+.form-header {
+	font-size: 20px;
+	line-height: 50px;
+	font-weight: 700;
+	border-bottom: 1px solid lightgray;
+	padding-left: 25px;
+}
+
+.darkgreyregular {
+	color: darkgray;
+	font-weight: 400;
+}
+
+form {
+	padding: 15px 25px 25px 25px;
+}
+
+input {
+	color: gray;
+	font-weight: 700;
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid darkgray;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+input::placeholder {
+	color: darkgray;
+}
+
+.signup {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+	background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
+	font-weight: 700;
+	width: 50%;
+	height: 40px;
+	border: 1px solid #EDC200;
+	border-radius: 3px;
+	cursor: pointer;
+	float: right;
+}
+
+.signup:hover {
+	background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
+}
