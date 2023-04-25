@@ -25,21 +25,22 @@
          </ul>
       </main>
 
-<!--                       Звук кнопок                        -->
-      <audio id="select">
-        <source src="select.mp3" type="audio/mpeg">
-      </audio>
-      
-      <script>
-         var menu = document.getElementById('menu');
-         menu.addEventListener('mouseover', function(event) {
-         if (event.target.tagName === 'A') {
-         var audio = document.getElementById('select');
-         audio.play();
-         }
-         });
-      </script>
-<!--                                                          -->
+<!--                                  Звук кнопок                                      -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+<script>
+   var sound = new Howl({
+     src: ['select.mp3']
+   });
+
+   var menu = document.getElementById('menu');
+   menu.addEventListener('mouseover', function(event) {
+     if (event.target.tagName === 'A') {
+       sound.play();
+     }
+   });
+</script>
+<!--                                                                                   -->
 
    </div>
 </body>
