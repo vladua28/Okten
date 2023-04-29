@@ -1,0 +1,107 @@
+/*                  Reset CSS                  */
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,body {
+	height: 100%;
+}
+html {
+	font-size: 16px;
+}
+button,input, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+	background-color: inherit;
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	/* font-family: ''; */
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+	}
+/*                                            */
+
+header {
+	width: 100vw;
+	height: calc(100vh / 3);
+	background-color: greenyellow;
+}
+
+main {
+	width: 100vw;
+	height: calc(100vh * 2 / 3);
+	display: flex;
+}
+
+.container {
+	width: 75%;
+	height: 100%;
+}
+
+.f {
+	width: 25%;
+	height: 100%;
+	background-color: cornflowerblue;
+}
+
+.b {
+	width: 100%;
+	height: 50%;
+	background-color: darkkhaki;
+}
+
+.box {
+	width: 100%;
+	height: 50%;
+	display: flex;
+}
+
+.c {
+	width: calc(100% / 3);
+	height: 100%;
+	background-color: aquamarine;
+}
+
+.d {
+	width: calc(100% / 3);
+	height: 100%;
+	background-color: darkorange;
+}
+
+.e {
+	width: calc(100% / 3);
+	height: 100%;
+	background-color: forestgreen;
+}
+
+header, .b, .c, .d, .e, .f {
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
