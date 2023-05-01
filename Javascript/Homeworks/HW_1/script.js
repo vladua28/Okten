@@ -45,7 +45,7 @@ console.log(typeof p);
 
 /*                      4                      */
 
-let name = prompt('What is your name', "");
+let name = prompt('What is your name?', "");
 let patronymic = prompt('What is your patronymic name?', "");
 let age = prompt('What is your age?', "");
 alert(`Your name is ${name}, your patronymic name is ${patronymic} and you are ${age} years old.`);
