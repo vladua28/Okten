@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+   body {
+      width: 100vw;
+      height: 100vh;
+      background: url(bg-mobile.jpg) 0 0 / cover no-repeat;
+   }
+   
+   .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   header {
+      position: absolute;
+      top: 5vh;
+      margin: 0 0 50px 0;
+   }
+
+   h1 {
+      font-size: 50px;
+   }
+
+   li {
+      width: 300px;
+      font-size: 40x;
+      opacity: 1;
+      margin-bottom: 25px;
+   }
+}
