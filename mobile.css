@@ -28,5 +28,10 @@
       font-size: 40x;
       opacity: 1;
       margin-bottom: 25px;
+      line-height: 60px;
+   }
+
+   img {
+      display: none;
    }
 }
