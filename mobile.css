@@ -2,7 +2,7 @@
    body {
       width: 100vw;
       height: 100vh;
-      background: url(bg-mobile.jpg) 0 0 / cover no-repeat;
+      background: url(bg-mobile.jpg) 0 0 / cover no-repeat fixed;
    }
    
    .wrapper {
@@ -21,6 +21,10 @@
    h1 {
       font-size: 50px;
       line-height: 50px;
+   }
+
+   ul {
+      padding-top: 150px;
    }
 
    li {

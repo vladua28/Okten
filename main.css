@@ -59,11 +59,8 @@ body {
 	font-family: 'Pixel', sans-serif;
 	width: 96vw;
 	height: 100vh;
-	background-image: url(bg.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
+	background: url(bg.gif) 0 0 / cover no-repeat fixed;
+	}
 
 h1 {
 	font-size: 70px;
