@@ -52,28 +52,34 @@ let favouriteBooks = [
         title: 'The Witcher. The last wish',
         pageCount: 282,
         genre: "Dark fantasy",
-        authors: {
-            name: 'Andrzej Sapkowski',
-            age: 74
-        }
+        authors: [
+            {
+                name: 'Andrzej Sapkowski',
+                age: 74
+            }
+        ]
     },
     {
         title: 'Robinson Crusoe',
         pageCount: 392,
         genre: "Adventure",
-        authors: {
-            name: 'Daniel Defoe',
-            age: 74
-        }
+        authors: [
+            {
+                name: 'Daniel Defoe',
+                age: 74
+            }
+        ]
     },
     {
         title: 'The Hunger Games',
         pageCount: 384,
         genre: "Dystopian",
-        authors: {
-            name: 'Suzanne Collins',
-            age: 74
-        }
+        authors: [
+            {
+                name: 'Suzanne Collins',
+                age: 74
+            }
+        ]
     }
 ]
 
