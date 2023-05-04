@@ -227,3 +227,61 @@ if (a > b) {
 } else {
     alert('???');
 }
+
+// 2.6 - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який, за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
+let y = prompt('Введіть щось');
+if (y = y || "default") {
+    alert(`Ви ввели "${y}", тип даних: ${typeof y} і це True!`);
+}
+
+// 2.7 - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+let js = coursesAndDurationArray[0];
+if (js.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
+
+let java = coursesAndDurationArray[1];
+if (java.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
+
+let python = coursesAndDurationArray[2];
+if (python.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
+
+let qa = coursesAndDurationArray[3];
+if (qa.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
+
+let fullStack = coursesAndDurationArray[4];
+if (fullStack.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
+
+let frontend = coursesAndDurationArray[5];
+if (frontend.monthDuration >= 5) {
+    console.log('Супер');
+} else {
+    console.log('Продовжуй вчитись');
+};
