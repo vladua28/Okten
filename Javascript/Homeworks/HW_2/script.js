@@ -232,4 +232,4 @@ if (a > b) {
 let y = prompt('Введіть що-небудь');
 if (y = y || 'default') {
     alert(`Ви ввели "${y}", тип даних: ${typeof y} і це True`);
-}
+};
