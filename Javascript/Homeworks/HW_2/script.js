@@ -288,4 +288,5 @@ let frontend = coursesAndDurationArray[5];
 if (frontend.monthDuration >= 5) {
     console.log('Супер');
 } else {
-    console.log('Продовжуй вчитись');}
+    console.log('Продовжуй вчитись');
+}
