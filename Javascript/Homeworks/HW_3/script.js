@@ -102,9 +102,10 @@ let products = [
     },
 ];
 for (let i = 0; i < products.length; i++) {
+    let product = products[i];
     document.write(`<div class="product-card">
-    <h3 class="product-title">${products[i].title} - ${products[i].price + ' UAH'}</h3>
-    <img src="${products[i].image}" alt="" class="product-image">
+    <h3 class="product-title">${product.title} - ${product.price + ' UAH'}</h3>
+    <img src="${product.image}" alt="${product.title}" class="product-image">
 </div>`);
 }
 
@@ -137,6 +138,7 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+document.write('Статус true:<br>')
 for (let i = 0; i < users.length; i++) {
     let status = users[i].status;
     if (status) {
@@ -147,6 +149,7 @@ for (let i = 0; i < users.length; i++) {
 document.write('<br><br>');
 
 // 4.2 - користувачів зі статусом false
+document.write('Статус false:<br>')
 for (let i = 0; i < users.length; i++) {
     let status = users[i].status;
     if (!status) {
@@ -157,6 +160,7 @@ for (let i = 0; i < users.length; i++) {
 document.write('<br><br>');
 
 // 4.3 - користувачів які старші за 30 років
+document.write('Старші за 30 років:<br>')
 for (let i = 0; i < users.length; i++) {
     let age = users[i].age;
     if (age > 30) {
