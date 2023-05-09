@@ -34,7 +34,7 @@ let book1 = {
     title: 'The Witcher. The last wish',
     pageCount: 282,
     genre: "Dark fantasy"
-};
+}
 let book2 = {
     title: 'Robinson Crusoe',
     pageCount: 392,
@@ -164,7 +164,7 @@ if (x !== 0) {
     alert('Вірно! Число не дорівнює нулю.');
 } else if (x === 0) {
     alert('Невірно! Число дорівнює нулю.');
-};
+}
 
 // 2.2 - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число (в першу, другу, третю или четверту частину години).
 let time = prompt('Введіть хвилини в форматі від 0 до 59');
@@ -178,7 +178,7 @@ if (time >= 0 && time < 15) {
     alert('Четверта чверть години');
 } else {
     alert('???');
-};
+}
 
 // 2.3 - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 let day = prompt('Котре сьогодні число?');
@@ -188,7 +188,7 @@ if (day >= 1 && day <= 15) {
     alert('Друга декада');
 } else {
     alert('???');
-};
+}
 
 // 2.4 - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 let dayOfWeek = prompt('Введіть порядковий номер дня тижня');
@@ -216,7 +216,7 @@ switch (dayOfWeek) {
         break;
     default:
         alert('???');
-};
+}
 
 // 2.5 - Користувач вводить або має два числа. Потрібно знайти та вивести максимальне число з тих двох . Також потрібно врахувати коли введені рівні числа.
 let a = +prompt('Введіть перше число');
@@ -229,15 +229,15 @@ if (a > b) {
     alert('Числа рівні');
 } else {
     alert('???');
-};
+}
 
 // 2.6 - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який, за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
 let y = prompt('Введіть щось');
-if (y === false || y === null || y === undefined || y === '' || y === NaN) {
+if (y === false || y === null || y === undefined || y === '' || isNaN(y)) {
     alert('default');
 } else {
     alert(`Ви ввели "${y}", тип даних: ${typeof y} і це True!`);
-};
+}
 
 // 2.7 - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 let coursesAndDurationArray = [
@@ -254,39 +254,38 @@ if (js.monthDuration >= 5) {
     console.log('Супер');
 } else {
     console.log('Продовжуй вчитись');
-};
+}
 
 let java = coursesAndDurationArray[1];
 if (java.monthDuration >= 5) {
     console.log('Супер');
 } else {
     console.log('Продовжуй вчитись');
-};
+}
 
 let python = coursesAndDurationArray[2];
 if (python.monthDuration >= 5) {
     console.log('Супер');
 } else {
     console.log('Продовжуй вчитись');
-};
+}
 
 let qa = coursesAndDurationArray[3];
 if (qa.monthDuration >= 5) {
     console.log('Супер');
 } else {
     console.log('Продовжуй вчитись');
-};
+}
 
 let fullStack = coursesAndDurationArray[4];
 if (fullStack.monthDuration >= 5) {
     console.log('Супер');
 } else {
     console.log('Продовжуй вчитись');
-};
+}
 
 let frontend = coursesAndDurationArray[5];
 if (frontend.monthDuration >= 5) {
     console.log('Супер');
 } else {
-    console.log('Продовжуй вчитись');
-};
+    console.log('Продовжуй вчитись');}
