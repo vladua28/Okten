@@ -138,33 +138,28 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-document.write('Статус true:<br>')
-for (let i = 0; i < users.length; i++) {
-    let status = users[i].status;
-    if (status) {
-        document.write(users[i].name);
-        document.write('<br>');
+
+document.write('Статус true:')
+for (const user of users) {
+    if (user.status) {
+        document.write(`<p>${user.name}<p>`);
     }
 }
-document.write('<br><br>');
 
 // 4.2 - користувачів зі статусом false
-document.write('Статус false:<br>')
-for (let i = 0; i < users.length; i++) {
-    let status = users[i].status;
-    if (!status) {
-        document.write(users[i].name);
-        document.write('<br>');
+document.write('Статус false:')
+for (let k = 0; k < users.length; k++) {
+    const user = users[k];
+    if (!user.status) {
+        document.write(`<p>${user.name}<p>`);
     }
 }
-document.write('<br><br>');
 
 // 4.3 - користувачів які старші за 30 років
-document.write('Старші за 30 років:<br>')
-for (let i = 0; i < users.length; i++) {
-    let age = users[i].age;
-    if (age > 30) {
-        document.write(users[i].name);
-        document.write('<br>');
+document.write('Старші за 30 років:')
+for (const user of users) {
+    if (user.age > 30) {
+        document.write(`<p>${user.name}<p>`);
+
     }
 }
