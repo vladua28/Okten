@@ -28,6 +28,8 @@
             <li><a href="HW_3.3+/index.html">HW_3.3+</a></li>
             <li><a href="HW_3.4+/index.html">HW_3.4+</a></li>
             <li><a href="HW_4/index.html">HW_4</a></li>
+            <li><a href="HW_4+/index.html">HW_4+</a></li>
+            <li><a href="HW_5/index.html">HW_5</a></li>
         </ul>
     </main>
 
@@ -35,11 +37,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
     <script>
-        var sound = new Howl({
+        let sound = new Howl({
             src: ['../../select.mp3']
         });
 
-        var menu = document.getElementById('menu');
+        let menu = document.getElementById('menu');
         menu.addEventListener('mouseover', function (event) {
             if (event.target.tagName === 'A') {
                 sound.play();
