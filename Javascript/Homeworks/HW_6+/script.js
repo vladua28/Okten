@@ -38,9 +38,7 @@ console.log(firstLtoUpper('javascript'));
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
-let normalizer = (str) => {
-    return str.replaceAll('..', ' ').replaceAll('---', ' ').replaceAll('__', ' ');
-}
+let normalizer = (str) => str.replaceAll('..', ' ').replaceAll('---', ' ').replaceAll('__', ' ');
 console.log(normalizer('Harry..Potter'));
 console.log(normalizer('Ron---Whisley'));
 console.log(normalizer('Hermione__Granger'));
@@ -73,4 +71,25 @@ let capitalize = str => {
 }
 console.log(capitalize('html/css javascript typescript react angular'));
 
-// 8 - Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@), наявність равлика, крапку яка знаходиться не менше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
+// 8 - Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :дані до знака равлика(@), наявність равлика, крапку яка знаходиться не менше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
+
+emailValidator = email => {
+    email = email.toLowerCase();
+    if (!email.includes('@') || !email.includes('.')) {
+        return false;
+    }
+    let local = email.slice(0, email.indexOf('@'));
+    let domain = email.slice(email.indexOf('@') + 1);
+    let indexOfDot = domain.indexOf('.');
+    return !(local.length === 0 || indexOfDot < 0 || domain.length - indexOfDot < 3);
+
+}
+
+
+console.log(emailValidator('some@email.com'));
+console.log(emailValidator('some@EMAIL.COM'));
+console.log(emailValidator('some@EMAIL.com'));
+console.log(emailValidator('some@email'));
+console.log(emailValidator('@email.com'));
+console.log(emailValidator('someemail.com'));
+console.log(emailValidator('some@e.com'));
