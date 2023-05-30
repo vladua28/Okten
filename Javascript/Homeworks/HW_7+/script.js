@@ -1,0 +1,4 @@
+class User {
+    age
+    name
+}
