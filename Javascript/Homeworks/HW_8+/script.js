@@ -1,46 +1,27 @@
 // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
-// < body >
-// < div
-// id = "content" > < /div>
-// <h1>Правила бойцовского клуба</h1>
-// <div id="wrap">
-//     <div className="rules rule1">
-//         <h2>Первое правило Бойцовского клуба.</h2>
-//         <p>Никому не рассказывать о Бойцовском клубе.</p>
-//     </div>
-//     <div className="rules rule2">
-//         <h2>Второе правило Бойцовского клуба.</h2>
-//         <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
-//     </div>
-//     <div className="rules rule3">
-//         <h2>Третье правило Бойцовского клуба.</h2>
-//         <p>В схватке участвуют только двое.</p>
-//     </div>
-//     <div className="rules rule4">
-//         <h2>Четвертое правило Бойцовского клуба.</h2>
-//         <p>Не более одного поединка за один раз.</p>
-//     </div>
-//
-//     <div className="rules rule5">
-//         <h2>Пятое правило Бойцовского клуба.</h2>
-//         <p>Бойцы сражаются без обуви и голые по пояс.</p>
-//     </div>
-//     <div className="rules rule6">
-//         <h2>Шестое правило Бойцовского клуба.</h2>
-//         <p>Поединок продолжается столько, сколько потребуется.</p>
-//     </div>
-//     <div className="rules rule7">
-//         <h2>Седьмое правило Бойцовского клуба.</h2>
-//         <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
-//             окончен.</p>
-//     </div>
-//     <div className="rules rule8">
-//         <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
-//         <p>Новичок обязан принять бой.</p>
-//     </div>
-// </div>
-//
-// <script>
-//     // Your awesome code here.....
-// </script>
-// </body>
+
+let arr = [];
+
+let collector = htmlElement => {
+    let className = htmlElement.className
+
+    if (className) {
+        className.split(" ").forEach(value => {
+            if (arr.indexOf(value) === -1) {
+                arr.push(value)
+                console.log(value)
+            }
+        })
+    }
+
+    let children = htmlElement.children;
+    if (children.length !== 0) {
+        for (const child of children) {
+            collector(child);
+        }
+    }
+}
+
+collector(document.body);
+
+console.log(arr);

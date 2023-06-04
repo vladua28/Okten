@@ -196,14 +196,14 @@ for (const course of coursesArray) {
     let block = document.createElement('div');
     block.classList.add('block');
     let title = document.createElement('h3');
-    title.innerHTML = `Course: ${course.title}`;
+    title.innerText = `Course: ${course.title}`;
     let duration = document.createElement('p');
-    duration.innerHTML = `Duration: ${course.monthDuration} months, ${course.hourDuration} hours`;
+    duration.innerText = `Duration: ${course.monthDuration} months, ${course.hourDuration} hours`;
     let modules = document.createElement('ul');
     modules.innerText = 'Modules:';
     for (const module of course.modules) {
         let li = document.createElement('li');
-        li.innerHTML = module;
+        li.innerText = module;
         modules.append(li);
     }
     block.append(title, duration, modules);
