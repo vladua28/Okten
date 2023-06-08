@@ -234,32 +234,3 @@ let usersList = [
         }
     }
 ];
-for (const user of usersList) {
-    let block = document.createElement('div');
-    block.classList.add('user');
-    let {
-        id,
-        name,
-        username,
-        email,
-        address: {street, suite, city, zipcode, geo: {lat, lng}},
-        phone,
-        website,
-        company: {name: companyName, catchPhrase, bs}
-    } = user;
-
-
-    document.body.appendChild(block);
-}
-
-
-function factorial(x) {
-    console.log(x);
-    if (x <= 1)
-        return 1;
-    console.log(x);
-    return x * factorial(x - 1);
-}
-
-let f = factorial(input);
-console.log(input + "! = " + f);

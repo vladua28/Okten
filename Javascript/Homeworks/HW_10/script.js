@@ -1,29 +1,27 @@
-// 1 - Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ. Іншими словами : заповнити форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом.
-document.body.innerHTML = `<form name="form1">
-    <input type="text" name="name" value="default name">
-    <br>
-    <input type="text" name="surname" value="default surname">
-    <br>
-    <input type="number" name="age" value="default age">
-    <br>
-    <button>Submit</button>
-</form>`
-let block = document.createElement('div');
-let form1 = document.forms.form1;
-form1.onsubmit = function (event) {
-    event.preventDefault()
+// 1 - Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та
+// вивести об'єкт в документ. Іншими словами : заповнити форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом.
+
+let form = document.profile;
+let button = document.getElementsByClassName('btn')[0];
+let block = document.querySelector('.block');
+form.onsubmit = function (e) {
+    e.preventDefault()
     let obj = {
         name: this.name.value,
         surname: this.surname.value,
         age: this.age.value
     }
-    console.log(obj)
-    div.innerText = `${obj.name} ${obj.surname} ${obj.age}`
-    document.body.appendChild(div);
+    block.innerText = JSON.stringify(obj, null, 1)
+        .replaceAll("{", '')
+        .replaceAll("}", '')
+        .replaceAll('"', '');
 }
 
+// 2 - є сторінка, на якій є блок, я кому знаходиться цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
-// 2 - є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
+let numberBlock = document.getElementById("number");
+let currentNumber = 0;
+localStorage.setItem('savedNumber', currentNumber);
 
 // 3 - Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
 
