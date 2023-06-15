@@ -12,11 +12,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 </head>
 <body>
+<audio id="audioPlayer" src="../../bg_music.mp3" autoplay loop></audio>
 <div class="wrapper">
     <header>
         <h1>Javascript</h1>
         <a href="https://vladua28.github.io/Okten/"><img src="../../arrow.png" alt="Back to homepage"></a>
     </header>
+
     <main>
         <ul id="menu">
             <li><a href="mini_project/index.html">Project JS</a></li>
@@ -42,7 +44,6 @@
             <li><a href="HW_2+/index.html">HW_2+</a></li>
             <li><a href="HW_2/index.html">HW_2</a></li>
             <li><a href="HW_1/index.html">HW_1</a></li>
-
         </ul>
     </main>
 
@@ -50,11 +51,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
     <script>
-        let sound = new Howl({
+        const sound = new Howl({
             src: ['../../select.mp3']
         });
 
-        let menu = document.getElementById('menu');
+        const menu = document.getElementById('menu');
         menu.addEventListener('mouseover', function (event) {
             if (event.target.tagName === 'A') {
                 sound.play();

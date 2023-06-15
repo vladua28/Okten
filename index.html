@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Homeworks</title>
-   <link rel="stylesheet" href="main.css">
-   <link rel="stylesheet" href="mobile.css">
-   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeworks</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
-   <div class="wrapper">
-      <header>
-         <h1>Homeworks</h1>
-      </header>
-      <main>
-         <ul id="menu">
+<audio id="audioPlayer" src="../../bg_music.mp3" autoplay loop></audio>
+<div class="wrapper">
+    <header>
+        <h1>Homeworks</h1>
+    </header>
+    <main>
+        <ul id="menu">
             <li><a href="HTML%20CSS/Homeworks/">HTML CSS</a></li>
             <li><a href="Javascript/Homeworks">Javascript</a></li>
             <li><a href="#">Database</a></li>
             <li><a href="#">React</a></li>
             <li><a href="#">Angular</a></li>
-         </ul>
-      </main>
+        </ul>
+    </main>
 
-<!--                                  Звук кнопок                                      -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <!--                                  Звук кнопок                                      -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
-<script>
-   var sound = new Howl({
-     src: ['select.mp3']
-   });
+    <script>
+        const sound = new Howl({
+            src: ['select.mp3']
+        });
 
-   var menu = document.getElementById('menu');
-   menu.addEventListener('mouseover', function(event) {
-     if (event.target.tagName === 'A') {
-       sound.play();
-     }
-   });
-</script>
-<!--                                                                                   -->
+        const menu = document.getElementById('menu');
+        menu.addEventListener('mouseover', function (event) {
+            if (event.target.tagName === 'A') {
+                sound.play();
+            }
+        });
+    </script>
+    <!--                                                                                   -->
 
-   </div>
+</div>
 </body>
 </html>
