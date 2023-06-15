@@ -56,9 +56,9 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                                 commentsContainer.appendChild(block);
                                 block.append(name, email, body);
 
-                                name.textContent = comment.name;
-                                email.textContent = comment.email;
-                                body.textContent = comment.body;
+                                name.textContent = `Name: ${comment.name}`;
+                                email.textContent = `Email: ${comment.email}`;
+                                body.textContent = `Body: ${comment.body}`;
                             });
 
                             showBtn.style.display = 'none';
