@@ -15,13 +15,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then((users) => {
         const wrapper = document.getElementsByClassName('wrapper')[0]
         users.forEach(user => {
-            const userBlock = document.createElement('div');
-            const userTitle = document.createElement('h3');
-            userTitle.innerText = `${user.id}. ${user.name}`;
+            const block = document.createElement('div');
+            const title = document.createElement('h3');
             const btn = document.createElement('button');
+
+            block.append(title, btn);
+            wrapper.appendChild(block);
+
+            title.innerText = `${user.id}. ${user.name}`;
             btn.innerText = 'Details';
-            userBlock.append(userTitle, btn);
-            wrapper.appendChild(userBlock);
+
             btn.onclick = function () {
                 location.href = `./pages/user-details.html?id=${user.id}`
             };

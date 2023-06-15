@@ -18,58 +18,60 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         const postInfo = document.createElement('div');
         const ul = document.createElement('ul');
 
+        postInfo.appendChild(ul);
+        wrapper.appendChild(postInfo);
+
         for (const key in post) {
             const li = document.createElement('li');
             li.innerText = `${key}: ${post[key]}`;
             ul.appendChild(li);
         }
 
-        postInfo.appendChild(ul);
-        wrapper.appendChild(postInfo);
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+            .then((response) => response.json())
+            .then((comments) => {
+                const btnContainer = document.createElement('div');
+                const commentsContainer = document.createElement('div');
+                const showBtn = document.createElement('button');
+                const hideBtn = document.createElement('button');
+
+                btnContainer.append(showBtn, hideBtn);
+                wrapper.append(btnContainer, commentsContainer);
+
+
+                showBtn.innerText = 'Show comments';
+                hideBtn.innerText = 'Hide comments';
+                hideBtn.style.display = 'none';
+
+                showBtn.onclick = () => {
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+                        .then((response) => response.json())
+                        .then((comments) => {
+                            comments.forEach((comment) => {
+                                const block = document.createElement('div');
+                                const name = document.createElement('h4');
+                                const email = document.createElement('p');
+                                const body = document.createElement('p');
+
+                                commentsContainer.appendChild(block);
+                                block.append(name, email, body);
+
+                                name.textContent = comment.name;
+                                email.textContent = comment.email;
+                                body.textContent = comment.body;
+                            });
+
+                            showBtn.style.display = 'none';
+                            hideBtn.style.display = 'block';
+                        });
+
+                };
+                hideBtn.onclick = () => {
+                    commentsContainer.innerHTML = '';
+                    hideBtn.style.display = 'none';
+                    showBtn.style.display = 'block';
+                };
+            });
     });
 
-fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
-    .then((response) => response.json())
-    .then((comments) => {
-        const btnContainer = document.createElement('div');
-        const commentsContainer = document.createElement('div');
-        const showBtn = document.createElement('button');
-        const hideBtn = document.createElement('button');
 
-        btnContainer.append(showBtn, hideBtn);
-        wrapper.append(btnContainer, commentsContainer);
-
-
-        showBtn.innerText = 'Show comments';
-        hideBtn.innerText = 'Hide comments';
-        hideBtn.style.display = 'none';
-
-        showBtn.onclick = () => {
-            fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
-                .then((response) => response.json())
-                .then((comments) => {
-                    comments.forEach((comment) => {
-                        const block = document.createElement('div');
-                        const name = document.createElement('h4');
-                        const email = document.createElement('p');
-                        const body = document.createElement('p');
-
-                        name.textContent = comment.name;
-                        email.textContent = comment.email;
-                        body.textContent = comment.body;
-
-                        block.append(name, email, body);
-                        commentsContainer.appendChild(block);
-                    });
-
-                    showBtn.style.display = 'none';
-                    hideBtn.style.display = 'block';
-                });
-
-        };
-        hideBtn.onclick = () => {
-            commentsContainer.innerHTML = '';
-            hideBtn.style.display = 'none';
-            showBtn.style.display = 'block';
-        };
-    });

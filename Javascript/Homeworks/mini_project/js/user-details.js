@@ -51,45 +51,47 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                 }
             }
         }
-    });
 
-fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-    .then((response) => response.json())
-    .then((posts) => {
-        const btnContainer = document.createElement('div');
-        const postsContainer = document.createElement('div');
-        const showBtn = document.createElement('button');
-        const hideBtn = document.createElement('button');
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+            .then((response) => response.json())
+            .then((posts) => {
+                const btnContainer = document.createElement('div');
+                const postsContainer = document.createElement('div');
+                const showBtn = document.createElement('button');
+                const hideBtn = document.createElement('button');
 
-        btnContainer.append(showBtn, hideBtn);
-        wrapper.append(btnContainer, postsContainer);
+                btnContainer.append(showBtn, hideBtn);
+                wrapper.append(btnContainer, postsContainer);
 
-        showBtn.innerText = 'Show posts';
-        hideBtn.innerText = 'Hide posts';
-        hideBtn.style.display = 'none';
+                showBtn.innerText = 'Show posts';
+                hideBtn.innerText = 'Hide posts';
+                hideBtn.style.display = 'none';
 
-        showBtn.onclick = function () {
-            posts.forEach(post => {
-                const block = document.createElement('div')
-                const title = document.createElement('h4');
-                const btn = document.createElement('button');
+                showBtn.onclick = function () {
+                    posts.forEach(post => {
+                        const block = document.createElement('div')
+                        const title = document.createElement('h4');
+                        const btn = document.createElement('button');
 
-                block.append(title, btn)
-                postsContainer.appendChild(block)
+                        block.append(title, btn)
+                        postsContainer.appendChild(block)
 
-                title.innerText = post.title;
-                btn.innerText = 'Post Details';
+                        title.innerText = post.title;
+                        btn.innerText = 'Post Details';
 
-                btn.onclick = function () {
-                    location.href = `../pages/post-details.html?id=${post.id}`;
+                        btn.onclick = function () {
+                            location.href = `../pages/post-details.html?id=${post.id}`;
+                        };
+                    });
+                    showBtn.style.display = 'none';
+                    hideBtn.style.display = 'block';
                 };
+                hideBtn.onclick = function () {
+                    postsContainer.innerHTML = '';
+                    hideBtn.style.display = 'none';
+                    showBtn.style.display = 'block';
+                }
             });
-            showBtn.style.display = 'none';
-            hideBtn.style.display = 'block';
-        };
-        hideBtn.onclick = function () {
-            postsContainer.innerHTML = '';
-            hideBtn.style.display = 'none';
-            showBtn.style.display = 'block';
-        }
     });
+
+
