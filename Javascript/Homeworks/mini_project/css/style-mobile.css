@@ -1,5 +1,5 @@
 @media screen and (max-width: 1151px) {
-    .comments {
+    .posts, .comments {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -9,7 +9,7 @@
         grid-template-columns: 1fr;
     }
 
-    .comments {
+    .posts, .comments {
         grid-template-columns: 1fr;
     }
 }

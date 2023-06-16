@@ -82,7 +82,12 @@ h2 {
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 5px;
 }
 
 main {
@@ -93,7 +98,7 @@ main {
 
 main > .block {
     background-color: #e0e0e0;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     border-radius: 10px;
     margin: 0 auto 25px;
     padding: 20px 20px 5px;
@@ -104,7 +109,7 @@ main > .block {
     background-color: #2e93ef;
     height: 25px;
     width: 250px;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     margin: 10px 0;
     font-weight: 700;
     color: white;
@@ -116,16 +121,16 @@ main > .block {
     background-color: #1877F2;
 }
 
-.button {
+.button {;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 14px;
-    background-color: #8834e5;
+    font-size: 16px;
+    background-color: #03DAC6;
     height: 30px;
     width: 90vw;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     margin: 0 auto;
     font-weight: 700;
     color: white;
@@ -139,7 +144,7 @@ main > .block {
 }
 
 .user-info {
-    margin: 0 0 20px 30px;
+    margin: 0 0 20px 5vw;
     padding-left: 10px;
     border-left: 1px solid #ccc;
 }
@@ -208,24 +213,22 @@ main > .block {
 }
 
 .posts {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 20px;
     padding: 0 5vw;
 }
 
 .post {
-    background-color: #e0e0e0;
-    width: 18%;
-    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid lightgray;
+    background-color: #e0e0e0;
+    border: 1px solid gray;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
 }
 
 .post > .btn {
@@ -234,7 +237,7 @@ main > .block {
 }
 
 .post-info {
-    margin: 0 0 20px 30px;
+    margin: 0 0 20px 5vw;
     padding-left: 10px;
     border-left: 1px solid #ccc;
 }
@@ -257,7 +260,7 @@ main > .block {
 }
 
 .post-info > li:nth-child(3)::before {
-    background-image: url(../img/account_circle_24px_outlined.png);
+    background-image: url(../img/featured_play_list_24px_outlined.png);
 }
 
 .post-info > li:nth-child(4)::before {
@@ -267,6 +270,7 @@ main > .block {
 .comments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 0 5vw;
@@ -274,11 +278,7 @@ main > .block {
 
 .comment {
     background-color: #e0e0e0;
-    width: 24%;
-    height: 100px;
-    justify-content: space-between;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
 }
