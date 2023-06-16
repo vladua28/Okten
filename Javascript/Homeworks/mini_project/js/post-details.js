@@ -18,14 +18,14 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         const postInfo = document.createElement('div');
         const ul = document.createElement('ul');
 
-        ul.classList.add('post-info');
+        ul.classList.add('info', 'post-info');
 
         postInfo.appendChild(ul);
         wrapper.appendChild(postInfo);
 
         for (const key in post) {
             const li = document.createElement('li');
-            li.innerText = `${key}: ${post[key]}`;
+            li.innerHTML = `<b>${key}:</b> ${post[key]}`;
             ul.appendChild(li);
         }
 
@@ -56,15 +56,15 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                                 const email = document.createElement('p');
                                 const body = document.createElement('p');
 
-                                block.classList.add('comment');
-                                commentsContainer.classList.add('comments');
+                                block.classList.add('block', 'comment');
+                                commentsContainer.classList.add('blocks', 'comments');
 
                                 commentsContainer.appendChild(block);
                                 block.append(name, email, body);
 
-                                name.textContent = `Name: ${comment.name}`;
-                                email.textContent = `Email: ${comment.email}`;
-                                body.textContent = `Body: ${comment.body}`;
+                                name.innerHTML = `<b>Name:</b> ${comment.name}`;
+                                email.innerHTML = `<b>Email:</b> ${comment.email}`;
+                                body.innerHTML = `<b>Body:</b> ${comment.body}`;
                             });
 
                             showBtn.style.display = 'none';

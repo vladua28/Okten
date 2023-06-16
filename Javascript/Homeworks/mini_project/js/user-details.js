@@ -18,7 +18,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then((user) => {
         const ul = document.createElement('ul');
-        ul.classList.add('user-info');
+        ul.classList.add('info', 'user-info');
 
         wrapper.appendChild(ul);
 
@@ -26,7 +26,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             const li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = `${key}: ${typeof user[key] !== 'object' ? user[key] : ''}`;
+            li.innerHTML = `<b>${key}:</b> ${typeof user[key] !== 'object' ? user[key] : ''}`;
 
             if (typeof user[key] === 'object') {
                 const childUl = document.createElement('ul');
@@ -36,17 +36,17 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                 for (const childKey in user[key]) {
                     const childLi = document.createElement('li');
                     childUl.appendChild(childLi);
-                    childLi.textContent = `${childKey}: ${typeof user[key][childKey] !== 'object' ? user[key][childKey] : ''}`;
+                    childLi.innerHTML = `<b>${childKey}:</b> ${typeof user[key][childKey] !== 'object' ? user[key][childKey] : ''}`;
 
                     if (childKey === 'geo' && typeof user[key][childKey] === 'object') {
                         const grandChildUl = document.createElement('ul');
                         childLi.appendChild(grandChildUl);
-                        grandChildUl.classList.add('grandchild-info');
+                        grandChildUl.classList.add('child-info');
 
                         for (const grandChildKey in user[key][childKey]) {
                             const grandChildLi = document.createElement('li');
                             grandChildUl.appendChild(grandChildLi);
-                            grandChildLi.textContent = `${grandChildKey}: ${user[key][childKey][grandChildKey]}`;
+                            grandChildLi.innerHTML = `<b>${grandChildKey}:</b> ${user[key][childKey][grandChildKey]}`;
                         }
                     }
                 }
@@ -79,7 +79,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                         block.classList.add('block', 'post');
                         title.classList.add('title');
                         btn.classList.add('btn');
-                        postsContainer.classList.add('posts');
+                        postsContainer.classList.add('blocks', 'posts');
 
                         block.append(title, btn)
                         postsContainer.appendChild(block)
