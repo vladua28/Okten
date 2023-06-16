@@ -47,30 +47,25 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                 hideBtn.style.display = 'none';
 
                 showBtn.onclick = () => {
-                    fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
-                        .then((response) => response.json())
-                        .then((comments) => {
-                            comments.forEach((comment) => {
-                                const block = document.createElement('div');
-                                const name = document.createElement('h3');
-                                const email = document.createElement('p');
-                                const body = document.createElement('p');
+                    comments.forEach((comment) => {
+                        const block = document.createElement('div');
+                        const name = document.createElement('h3');
+                        const email = document.createElement('p');
+                        const body = document.createElement('p');
 
-                                block.classList.add('block', 'comment');
-                                commentsContainer.classList.add('blocks', 'comments');
+                        block.classList.add('block', 'comment');
+                        commentsContainer.classList.add('blocks', 'comments');
 
-                                commentsContainer.appendChild(block);
-                                block.append(name, email, body);
+                        commentsContainer.appendChild(block);
+                        block.append(name, email, body);
 
-                                name.innerHTML = `<b>Name:</b> ${comment.name}`;
-                                email.innerHTML = `<b>Email:</b> ${comment.email}`;
-                                body.innerHTML = `<b>Body:</b> ${comment.body}`;
-                            });
+                        name.innerHTML = `<b>Name:</b> ${comment.name}`;
+                        email.innerHTML = `<b>Email:</b> ${comment.email}`;
+                        body.innerHTML = `<b>Body:</b> ${comment.body}`;
+                    });
 
-                            showBtn.style.display = 'none';
-                            hideBtn.style.display = 'block';
-                        });
-
+                    showBtn.style.display = 'none';
+                    hideBtn.style.display = 'block';
                 };
                 hideBtn.onclick = () => {
                     commentsContainer.innerHTML = '';

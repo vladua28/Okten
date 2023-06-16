@@ -38,7 +38,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                     childUl.appendChild(childLi);
                     childLi.innerHTML = `<b>${childKey}:</b> ${typeof user[key][childKey] !== 'object' ? user[key][childKey] : ''}`;
 
-                    if (childKey === 'geo' && typeof user[key][childKey] === 'object') {
+                    if (typeof user[key][childKey] === 'object') {
                         const grandChildUl = document.createElement('ul');
                         childLi.appendChild(grandChildUl);
                         grandChildUl.classList.add('child-info');
