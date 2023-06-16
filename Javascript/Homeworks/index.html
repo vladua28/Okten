@@ -16,7 +16,7 @@
 <div class="wrapper">
     <header>
         <h1>Javascript</h1>
-        <a href="https://vladua28.github.io/Okten/"><img src="../../arrow.png" alt="Back to homepage"></a>
+        <a href="https://vladua28.github.io/Okten/" id="back"><img src="../../arrow.png" alt="Back to homepage"></a>
     </header>
 
     <main>
@@ -61,6 +61,13 @@
                 sound.play();
             }
         });
+
+        const back = document.getElementById('back');
+        back.addEventListener('mouseover', function (event) {
+            if (event.target.tagName === 'IMG') {
+                sound.play();
+            }
+        })
     </script>
     <!--                                                                                   -->
 </div>

@@ -18,6 +18,8 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         const postInfo = document.createElement('div');
         const ul = document.createElement('ul');
 
+        ul.classList.add('post-info');
+
         postInfo.appendChild(ul);
         wrapper.appendChild(postInfo);
 
@@ -38,6 +40,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                 btnContainer.append(showBtn, hideBtn);
                 wrapper.append(btnContainer, commentsContainer);
 
+                btnContainer.classList.add('button');
 
                 showBtn.innerText = 'Show comments';
                 hideBtn.innerText = 'Hide comments';
@@ -49,9 +52,12 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                         .then((comments) => {
                             comments.forEach((comment) => {
                                 const block = document.createElement('div');
-                                const name = document.createElement('h4');
+                                const name = document.createElement('h3');
                                 const email = document.createElement('p');
                                 const body = document.createElement('p');
+
+                                block.classList.add('comment');
+                                commentsContainer.classList.add('comments');
 
                                 commentsContainer.appendChild(block);
                                 block.append(name, email, body);

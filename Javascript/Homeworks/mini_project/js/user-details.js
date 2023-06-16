@@ -14,17 +14,16 @@
 const id = new URLSearchParams(location.search).get('id');
 const wrapper = document.getElementsByClassName('wrapper')[0];
 
-
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then((user) => {
         const ul = document.createElement('ul');
+        ul.classList.add('user-info');
 
         wrapper.appendChild(ul);
 
         for (const key in user) {
             const li = document.createElement('li');
-
             ul.appendChild(li);
 
             li.textContent = `${key}: ${typeof user[key] !== 'object' ? user[key] : ''}`;
@@ -32,6 +31,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             if (typeof user[key] === 'object') {
                 const childUl = document.createElement('ul');
                 li.appendChild(childUl);
+                childUl.classList.add('child-info');
 
                 for (const childKey in user[key]) {
                     const childLi = document.createElement('li');
@@ -41,6 +41,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                     if (childKey === 'geo' && typeof user[key][childKey] === 'object') {
                         const grandChildUl = document.createElement('ul');
                         childLi.appendChild(grandChildUl);
+                        grandChildUl.classList.add('grandchild-info');
 
                         for (const grandChildKey in user[key][childKey]) {
                             const grandChildLi = document.createElement('li');
@@ -60,6 +61,8 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                 const showBtn = document.createElement('button');
                 const hideBtn = document.createElement('button');
 
+                btnContainer.classList.add('button');
+
                 btnContainer.append(showBtn, hideBtn);
                 wrapper.append(btnContainer, postsContainer);
 
@@ -70,13 +73,18 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                 showBtn.onclick = function () {
                     posts.forEach(post => {
                         const block = document.createElement('div')
-                        const title = document.createElement('h4');
+                        const title = document.createElement('h3');
                         const btn = document.createElement('button');
+
+                        block.classList.add('block', 'post');
+                        title.classList.add('title');
+                        btn.classList.add('btn');
+                        postsContainer.classList.add('posts');
 
                         block.append(title, btn)
                         postsContainer.appendChild(block)
 
-                        title.innerText = post.title;
+                        title.innerText = `${post.id}. ${post.title}`;
                         btn.innerText = 'Post Details';
 
                         btn.onclick = function () {
