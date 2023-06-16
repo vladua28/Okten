@@ -138,6 +138,10 @@ main > .block {
     cursor: pointer;
 }
 
+.btn:hover {
+    background-color: #018786;
+}
+
 .button button {
     font-weight: 700;
     cursor: pointer;
