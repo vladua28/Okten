@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database HW</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../mobile.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+</head>
+<body>
+<audio id="audioPlayer" src="../../bg_music.mp3" autoplay loop></audio>
+<div class="wrapper">
+    <header>
+        <h1>Javascript</h1>
+        <a href="https://vladua28.github.io/Okten/" id="back"><img src="../../arrow.png" alt="Back to homepage"></a>
+    </header>
+
+    <main>
+        <ul id="menu">
+            <li><a href="./MySQL/hw_1.sql" target="_blank">HW_1</a></li>
+        </ul>
+    </main>
+
+    <!--                                  Звук кнопок                                      -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+    <script>
+        const sound = new Howl({
+            src: ['../../select.mp3']
+        });
+
+        const menu = document.getElementById('menu');
+        menu.addEventListener('mouseover', function (event) {
+            if (event.target.tagName === 'A') {
+                sound.play();
+            }
+        });
+
+        const back = document.getElementById('back');
+        back.addEventListener('mouseover', function (event) {
+            if (event.target.tagName === 'IMG') {
+                sound.play();
+            }
+        })
+    </script>
+    <!--                                                                                   -->
+</div>
+</body>
+</html>
