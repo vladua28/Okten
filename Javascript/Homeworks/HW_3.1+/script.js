@@ -326,7 +326,7 @@ console.log('*************************')
 numAuthors = 1;
 let booksWithSingleAuthor = [];
 for (let book of books) {
-    if (book.authors.length = numAuthors) {
+    if (book.authors.length === numAuthors) {
         booksWithSingleAuthor.push(book);
     }
 }

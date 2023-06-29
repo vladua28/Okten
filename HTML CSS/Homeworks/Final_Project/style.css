@@ -72,7 +72,7 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 17px;
-    line-height: 27.3px;
+    line-height: 27px;
     margin-bottom: 10vh;
 }
 
@@ -152,7 +152,7 @@ section {
 }
 
 .block-1__buttons {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 20px;
     text-align: center;
@@ -179,7 +179,7 @@ section {
     text-align: center;
     font-size: 15px;
     line-height: 17px;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #618ADC;
     margin-bottom: 32px;
@@ -189,7 +189,7 @@ section {
 .block-1__footer-integrations {
     display: flex;
     align-items: flex-start;
-    padding: 0px 50px;
+    padding: 0 50px;
     gap: 40px;
 }
 

@@ -1,37 +1,37 @@
 @media screen and (max-width: 768px) {
-   body {
-      width: 100vw;
-      height: 100vh;
-      background: url(bg-mobile.jpg) 0 0 / cover no-repeat fixed;
-   }
-   
-   .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-   }
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: url(bg-mobile.jpg) 0 0 / cover no-repeat fixed;
+    }
 
-   header {
-      /* position: absolute;
-      top: 5vh; */
-      margin: 5vh 0;
-   }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-   h1 {
-      font-size: 50px;
-      line-height: 50px;
-   }
+    header {
+        /* position: absolute;
+        top: 5vh; */
+        margin: 5vh 0;
+    }
 
-   li {
-      width: 300px;
-      font-size: 40x;
-      opacity: 1;
-      margin-bottom: 25px;
-      line-height: 60px;
-   }
+    h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
 
-   img {
-      display: none;
-   }
+    li {
+        width: 300px;
+        font-size: 40px;
+        opacity: 1;
+        margin-bottom: 25px;
+        line-height: 60px;
+    }
+
+    img {
+        display: none;
+    }
 }
