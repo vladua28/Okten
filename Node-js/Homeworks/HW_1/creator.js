@@ -4,7 +4,7 @@ const path = require('path');
 const mainFolderPath = './mainFolder';
 
 const creator = () => {
-    fs.mkdir(mainFolderPath, (err) => {
+    fs.mkdir(mainFolderPath, {recursive: true},(err) => {
         if (err) {
             console.error(err);
             throw new Error();
@@ -18,7 +18,7 @@ const creator = () => {
                 const childFileName = `childFile${i}.txt`;
                 const childFilePath = path.join(mainFolderPath, childFileName);
 
-                fs.mkdir(childFolderPath, (err) => {
+                fs.mkdir(childFolderPath, {recursive: true},(err) => {
                     if (err) {
                         console.error(err);
                         throw new Error();
